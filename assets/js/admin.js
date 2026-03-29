@@ -320,7 +320,7 @@ const renderTeamView = () => {
 };
 
 // ========== DELETE CONTENT ==========
-window.deleteContent = async (coll, id) => {
+const deleteContent = async (coll, id) => {
   if (!confirm("Delete this item permanently?")) return;
   
   try { 
@@ -332,7 +332,7 @@ window.deleteContent = async (coll, id) => {
 };
 
 // ========== EDIT CONTENT ==========
-window.editContent = async (coll, id) => {
+const editContent = async (coll, id) => {
   try {
     const docSnap = await getDoc(doc(db, coll, id));
     if (!docSnap.exists()) {
@@ -394,8 +394,8 @@ const renderManagement = () => {
             <span style="color:white;font-weight:600;font-size:0.9rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${display}</span>
           </div>
           <div style="display:flex;gap:8px;flex-shrink:0;">
-            <button onclick="editContent('${coll}','${docSnap.id}')" style="background:rgba(6,182,212,0.1);color:#06b6d4;border:1px solid rgba(6,182,212,0.2);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;">Edit</button>
-            <button onclick="deleteContent('${coll}','${docSnap.id}')" style="background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;">Delete</button>
+            <button class="btn-edit-content" data-coll="${coll}" data-id="${docSnap.id}" style="background:rgba(6,182,212,0.1);color:#06b6d4;border:1px solid rgba(6,182,212,0.2);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;">Edit</button>
+            <button class="btn-delete-content" data-coll="${coll}" data-id="${docSnap.id}" style="background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;">Delete</button>
           </div>
         `;
         list.appendChild(row);
@@ -405,6 +405,15 @@ const renderManagement = () => {
     });
   });
 };
+
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.btn-edit-content')) {
+    editContent(e.target.dataset.coll, e.target.dataset.id);
+  }
+  if (e.target.matches('.btn-delete-content')) {
+    deleteContent(e.target.dataset.coll, e.target.dataset.id);
+  }
+});
 
 // ========== DASHBOARD COUNTS ==========
 const updateDashboardCounts = () => {

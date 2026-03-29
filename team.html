@@ -38,8 +38,8 @@
 
         <!-- Tabs -->
         <div class="tab-group" style="margin-bottom:3rem;">
-          <button class="tab-btn active" onclick="switchTeamTab('faculty')">Faculty Team</button>
-          <button class="tab-btn" onclick="switchTeamTab('core')">Core Team</button>
+          <button class="tab-btn active" id="tab-faculty" data-tab="faculty">Faculty Team</button>
+          <button class="tab-btn" id="tab-core" data-tab="core">Core Team</button>
         </div>
 
         <!-- Faculty Grid -->
@@ -57,23 +57,30 @@
   </div>
 
   <script>
-    function switchTeamTab(tab) {
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabFaculty = document.getElementById('tab-faculty');
+      const tabCore = document.getElementById('tab-core');
       const fGrid = document.getElementById('faculty-grid');
       const cGrid = document.getElementById('core-grid');
       const btns = document.querySelectorAll('.tab-btn');
-      
-      if (tab === 'faculty') {
-        fGrid.style.display = 'grid';
-        cGrid.style.display = 'none';
-        btns[0].classList.add('active');
-        btns[1].classList.remove('active');
-      } else {
-        fGrid.style.display = 'none';
-        cGrid.style.display = 'grid';
-        btns[1].classList.add('active');
-        btns[0].classList.remove('active');
+
+      function switchTeamTab(tab) {
+        if (tab === 'faculty') {
+          fGrid.style.display = 'grid';
+          cGrid.style.display = 'none';
+          btns[0].classList.add('active');
+          btns[1].classList.remove('active');
+        } else {
+          fGrid.style.display = 'none';
+          cGrid.style.display = 'grid';
+          btns[1].classList.add('active');
+          btns[0].classList.remove('active');
+        }
       }
-    }
+
+      if (tabFaculty) tabFaculty.addEventListener('click', () => switchTeamTab('faculty'));
+      if (tabCore) tabCore.addEventListener('click', () => switchTeamTab('core'));
+    });
   </script>
   <script type="module" src="assets/js/team-page.js"></script>
   <script type="module" src="main.js"></script>

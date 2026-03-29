@@ -46,13 +46,21 @@ if (authSection) {
   });
 }
 
+// === EVENT DELEGATION ===
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.btn-read-more')) {
+    e.target.previousElementSibling.style.display = 'inline';
+    e.target.style.display = 'none';
+  }
+});
+
 // === CARD BUILDERS (with links/redirections) ===
 
 function createEventCard(item) {
   const img = item.image || 'https://placehold.co/400x320/070b14/06b6d4?text=Event';
   const regLink = item.registerUrl ? `<a href="${item.registerUrl}" target="_blank" rel="noopener" class="btn-primary" style="margin-top:12px;padding:10px 20px;font-size:0.85rem;display:inline-flex;">Register Now →</a>` : '';
   const readMore = item.description && item.description.length > 120
-    ? `<span class="read-more-text" style="display:none;">${item.description.substring(120)}</span><button onclick="this.previousElementSibling.style.display='inline';this.style.display='none';" style="background:none;border:none;color:var(--accent);cursor:pointer;font-weight:600;font-size:0.85rem;margin-left:4px;">Read More</button>`
+    ? `<span class="read-more-text" style="display:none;">${item.description.substring(120)}</span><button class="btn-read-more" style="background:none;border:none;color:var(--accent);cursor:pointer;font-weight:600;font-size:0.85rem;margin-left:4px;">Read More</button>`
     : '';
 
   return `
