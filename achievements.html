@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements | ACES RSCOE</title>
+  <meta name="description" content="Celebrating the successes of ACES RSCOE students and faculty.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="page-wrapper">
+    <nav class="navbar" id="navbar"><div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="ACES"><span>ACES</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li>
+        <li><a href="achievements.html" class="active">Achievements</a></li><li><a href="placements.html">Placements</a></li>
+        <li><a href="clubs.html">Clubs</a></li><li><a href="team.html">Team</a></li>
+      </ul>
+      <div class="nav-cta-wrap" style="display:flex;align-items:center;gap:12px;"><div id="auth-section"><a href="login.html" class="nav-cta">Admin Login</a></div></div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></button>
+    </div></nav>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-header"><span>Menu</span><button class="mobile-menu-close" id="mobile-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
+      <nav class="mobile-nav"><a href="index.html">🏠 Home</a><a href="events.html">📅 Events</a><a href="achievements.html" class="active">🏆 Achievements</a><a href="placements.html">💼 Placements</a><a href="clubs.html">👥 Clubs</a><a href="team.html">👤 Team</a></nav>
+    </div>
+    <main style="flex:1;position:relative;z-index:10;">
+      <div class="container" style="padding-top:7rem;padding-bottom:4rem;">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <h1 class="section-title"><span class="heading-gradient">Our Achievements</span></h1>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Celebrating the hard work, dedication, and monumental successes of our students and faculty.</p>
+        </div>
+        <div id="achievements-grid" class="cards-grid-2" style="display:grid;gap:2rem;">
+          <div class="loading-wrap" style="grid-column:1/-1;"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="footer-inner"><div class="footer-bottom"><p>&copy; <script>document.write(new Date().getFullYear())</script> Department of Computer Engineering, RSCOE.</p></div></div></footer>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

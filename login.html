@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | ACES RSCOE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="page-wrapper" style="justify-content:center;align-items:center;min-height:100vh;">
+    <div style="position:relative;z-index:10;width:100%;max-width:440px;padding:1rem;">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <a href="index.html" style="text-decoration:none;">
+          <img src="logo.png" alt="ACES" style="width:80px;height:80px;border-radius:20px;margin-bottom:1rem;filter:drop-shadow(0 0 15px rgba(37,99,235,0.4));">
+        </a>
+        <h1 style="font-size:1.75rem;font-weight:800;color:white;margin-bottom:0.5rem;">Admin Login</h1>
+        <p style="color:var(--text-dim);font-size:0.9rem;">Sign in to manage ACES website content</p>
+      </div>
+      <div class="glass-panel" style="padding:2rem;">
+        <form id="login-form">
+          <div style="margin-bottom:1.25rem;">
+            <label style="display:block;color:var(--text-dim);font-size:0.85rem;font-weight:600;margin-bottom:6px;">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="admin@acesrscoe.com" required style="width:100%;">
+          </div>
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block;color:var(--text-dim);font-size:0.85rem;font-weight:600;margin-bottom:6px;">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required style="width:100%;">
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;padding:14px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Sign In
+          </button>
+        </form>
+        <div id="login-msg" style="text-align:center;margin-top:1rem;font-weight:600;font-size:0.9rem;"></div>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;">
+        <a href="index.html" style="color:var(--text-dim);font-size:0.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>

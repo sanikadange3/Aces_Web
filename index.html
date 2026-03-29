@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACES RSCOE | Association of Computer Engineering Students</title>
+  <meta name="description"
+    content="Association of Computer Engineering Students (ACES) at JSPM's Rajarshi Shahu College of Engineering. Fostering global competence in academics, research, and careers.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <div class="page-wrapper">
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="ACES Home">
+          <img src="logo.png" alt="ACES">
+          <span>ACES</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                <path
+                  d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              </svg>Home</a></li>
+          <li><a href="events.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M3 10h18" />
+              </svg>Events</a></li>
+          <li><a href="achievements.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                <circle cx="12" cy="8" r="6" />
+              </svg>Achievements</a></li>
+          <li><a href="placements.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                <rect width="20" height="14" x="2" y="6" rx="2" />
+              </svg>Placements</a></li>
+          <li><a href="clubs.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>Clubs</a></li>
+          <li><a href="team.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>Team</a></li>
+        </ul>
+        <div class="nav-cta-wrap" style="display:flex;align-items:center;gap:12px;">
+          <div id="auth-section">
+            <a href="login.html" class="nav-cta">Admin Login</a>
+          </div>
+        </div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <span>Menu</span>
+        <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" class="active">🏠 Home</a>
+        <a href="events.html">📅 Events</a>
+        <a href="achievements.html">🏆 Achievements</a>
+        <a href="placements.html">💼 Placements</a>
+        <a href="clubs.html">👥 Clubs</a>
+        <a href="team.html">👤 Team</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="login.html" class="btn-primary" style="width:100%;text-align:center;">Admin Login</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-float-1 hero-floating">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="m16 18 6-6-6-6" />
+          <path d="m8 6-6 6 6 6" />
+        </svg>
+      </div>
+      <div class="hero-float-2 hero-floating">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-colleges">
+          <img src="/saraswati.png" alt="Saraswati" onerror="this.style.display='none'">
+          <h2 class="hero-title">JSPM's <span class="hero-title-sub">Rajarshi Shahu College of Engineering</span></h2>
+        </div>
+        <h3 class="hero-dept">Department of Computer Engineering</h3>
+        <h4 class="hero-assoc">Association of Computer Engineering Students</h4>
+
+        <div class="hero-logo-wrap">
+          <div class="hero-logo-glow"></div>
+          <img src="logo.png" alt="ACES Logo" class="hero-logo">
+          <p class="hero-quote">"Where your Bugs Meet our Best Ideas!"</p>
+        </div>
+
+        <p class="hero-desc">Welcome to the Association of Computer Engineering Students (ACES) at RSCOE. We nurture
+          globally competent graduates in academics, research, entrepreneurship, and professional careers.</p>
+
+        <a href="team.html" class="btn-primary" style="box-shadow: 0 0 20px rgba(37,99,235,0.4);">
+          Discover More
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section-lg" style="position:relative;z-index:10;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <h2 class="section-title">By the Numbers</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+          <div class="stat-card stat-primary">
+            <div class="stat-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                <circle cx="12" cy="8" r="6" />
+              </svg></div>
+            <div class="stat-number">392</div>
+            <div class="stat-label">Copyrights filed in 1 Day</div>
+          </div>
+          <div class="stat-card stat-cyan">
+            <div class="stat-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+              </svg></div>
+            <div class="stat-number">Toppers</div>
+            <div class="stat-label">27 in SPPU Top 10 Merit</div>
+          </div>
+          <div class="stat-card stat-purple">
+            <div class="stat-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <circle cx="9" cy="7" r="4" />
+              </svg></div>
+            <div class="stat-number">180+</div>
+            <div class="stat-label">Annual Intake & Int. MoUs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC SECTIONS (Firebase) -->
+    <section class="section" id="events-section" style="position:relative;z-index:10;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <h2 class="section-title"><span class="heading-gradient">Latest Events</span></h2>
+          <div class="section-divider"></div>
+        </div>
+        <div id="events-grid" class="cards-grid">
+          <div class="loading-wrap">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+          <a href="events.html" class="btn-outline">View All Events →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements-section" style="position:relative;z-index:10;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <h2 class="section-title"><span class="heading-gradient">Achievements</span></h2>
+          <div class="section-divider"></div>
+        </div>
+        <div id="achievements-grid" class="cards-grid-2" style="display:grid;gap:2rem;">
+          <div class="loading-wrap">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+          <a href="achievements.html" class="btn-outline">View All Achievements →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="placements-section" style="position:relative;z-index:10;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <h2 class="section-title"><span class="heading-gradient">Top Placements</span></h2>
+          <div class="section-divider"></div>
+        </div>
+        <div id="placements-grid" class="cards-grid" style="max-width:700px;margin:0 auto;">
+          <div class="loading-wrap">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+          <a href="placements.html" class="btn-outline">View All Placements →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clubs-section" style="position:relative;z-index:10;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:3rem;">
+          <h2 class="section-title"><span class="heading-gradient">Student Clubs</span></h2>
+          <div class="section-divider"></div>
+        </div>
+        <div id="clubs-grid" class="cards-grid">
+          <div class="loading-wrap">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+          <a href="clubs.html" class="btn-outline">View All Clubs →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="position:relative;z-index:10;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:2rem;">
+          <h2 class="section-title"><span class="heading-gradient">Get in Touch</span></h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="form-container glass-panel">
+          <form id="contact-form">
+            <input type="text" id="contact-name" name="name" placeholder="Full Name" required>
+            <input type="email" id="contact-email" name="email" placeholder="Email Address" required>
+            <textarea id="contact-message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+          </form>
+          <div id="form-msg" style="text-align:center;margin-top:15px;font-weight:600;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+      <div class="footer-glow footer-glow-1"></div>
+      <div class="footer-glow footer-glow-2"></div>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html">
+              <img src="logo.png" alt="ACES Logo">
+              <span>ACES RSCOE</span>
+            </a>
+            <p class="footer-desc">Department of Computer Engineering at JSPM's Rajarshi Shahu College of Engineering.
+              Fostering global competence in academics, research, entrepreneurship, and professional careers.</p>
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/aces_rscoe/" target="_blank" rel="noopener" class="footer-social-link"
+                aria-label="Instagram"
+                style="--hover-bg:rgba(236,72,153,0.2);--hover-border:rgba(236,72,153,0.4);--hover-color:#f472b6;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/department-of-computer-engineering-1872b83b4" target="_blank"
+                rel="noopener" class="footer-social-link" aria-label="LinkedIn"
+                style="--hover-bg:rgba(59,130,246,0.2);--hover-border:rgba(59,130,246,0.4);--hover-color:#60a5fa;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html"><span>›</span>Home</a></li>
+              <li><a href="events.html"><span>›</span>Events & Hackathons</a></li>
+              <li><a href="achievements.html"><span>›</span>Achievements</a></li>
+              <li><a href="placements.html"><span>›</span>Placements</a></li>
+              <li><a href="team.html"><span>›</span>Our Team</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-heading">Contact Us</h3>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Ashok Nagar, Tathawade, Pimpri-Chinchwad, Maharashtra 411033</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+              </svg>
+              <a href="mailto:aces.rscoee1@gmail.com"
+                style="color:var(--text-dim);text-decoration:none;">aces.rscoee1@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy;
+            <script>document.write(new Date().getFullYear())</script> Department of Computer Engineering, RSCOE. All
+            rights reserved.
+          </p>
+          <div style="display:flex;gap:20px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

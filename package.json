@@ -1,0 +1,17 @@
+{
+  "name": "aces-rscoe-dynamic",
+  "version": "1.0.0",
+  "description": "Dynamic web application for ACES RSCOE student association",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^10.14.1"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}
